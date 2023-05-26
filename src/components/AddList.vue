@@ -5,8 +5,8 @@
             <li v-for="(item,index) in items" v-bind:key="index">
             <span>{{ item }}</span>
             <div>
-                <i class="fa-solid fa-pen-to-square" v-on:click.prevent="editItem(index)"></i>
-                <i class="fa-solid trash" v-on:click.prevent="deleteItem(index)"></i>
+                <!-- <i class="fa-solid fa-pen-to-square" v-on:click.prevent="editItem(index)"></i> -->
+                <i class="fa-solid fa-trash" v-on:click.prevent="deleteItem(index)"></i>
             </div>
             </li>
         </ul>
