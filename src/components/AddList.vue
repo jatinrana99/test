@@ -1,20 +1,24 @@
 <template>
-    <div>
+    <div id="testing">
         <!-- <FormAdd v-on:submit-item="submit"/> -->
         <FormAdd v-bind:edit-index="editIndex" 
                  v-bind:name="name"
                  v-on:edit-item="edit"
                  v-on:submit-item="submit">
          </FormAdd>
-        <ul>
+        <ol>
             <li v-for="(item,index) in data" v-bind:key="index">
             <span>{{ item }}</span>
-            <div>
-                <i class="fa-solid fa-pen-to-square" v-on:click.prevent="editItem(index)"></i>
-                <i class="fa-solid fa-trash" v-on:click.prevent="deleteItem(index)"></i>
+            <div id="button">
+                <div>
+                    <i class="fa-solid fa-pen-to-square" v-on:click.prevent="editItem(index)"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-trash" v-on:click.prevent="deleteItem(index)"></i>
+                </div>
             </div>
             </li>
-        </ul>
+        </ol>
     </div>
 </template>
 
@@ -61,3 +65,24 @@ export default {
   }
 
 </script>
+
+<style>
+#testing li {
+  border: 1px solid;
+  /* border-radius: 15%; */
+  padding: 5px;
+  /* margin:8px; */
+}
+#testing li a {
+  font-size: 10px;
+  float: right;
+  padding: 5px;
+}
+
+#button{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: rgba(129, 206, 148, 0.797);
+}
+</style>
