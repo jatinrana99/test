@@ -1,13 +1,23 @@
 <template>
     <div>Test Component</div>
-    <section>
-        <div>Enter Something</div>
-        <input type="text">
-    </section>
+    <AddList/>
+    <FormAdd/>
 </template>
 
 <script>
+
+
+
+
 export default {
-    name:`Test`
+    name:`Test`,
+
 }
 </script>
+
+<style scoped>
+#testing li{
+    border: 1px solid;
+    padding: 5px;
+}
+</style>
